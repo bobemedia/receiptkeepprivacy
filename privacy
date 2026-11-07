@@ -1,47 +1,51 @@
 # Privacy Policy — ReceiptKeep
 
-_Last updated: September 2025_
+_Last updated: November 2026_
 
-ReceiptKeep (“the App”) is provided by **Bobé Media** (“we”, “us”, “our”).
+ReceiptKeep (“the App”) is provided by **Bobé Media** (“we”, “us”, “our”). ReceiptKeep is built so that your receipts stay yours. This policy explains what the App stores, what leaves your device, and why.
 
-We respect your privacy. This policy explains what we collect, why, and your choices.
+## Your Receipts
 
-## Information We Collect
+Your receipts, photos, tags, notes and reimbursement status are stored on your device and in your personal iCloud account, using Apple CloudKit. We have no access to your iCloud data and run no server that stores your receipts.
 
-### Receipts & Metadata
-- Receipts you add (store name, dates, amounts, categories, tags, notes) are saved **locally on your device** and, if you enable iCloud, synced via **Apple CloudKit** to your private iCloud container. We cannot access your personal iCloud data.
+Backups you export are files you control. We never see them.
 
-### Images
-- Receipt photos you choose or scan are stored locally and may sync via iCloud if enabled.
+## AI Scanning
 
-### Purchases
-- We use **RevenueCat** to manage in-app purchases and subscriptions. RevenueCat receives purchase receipts and an anonymous user identifier in order to verify entitlements. See RevenueCat’s privacy policy.
+When you scan a receipt, the text on it is read on your device using Apple's on-device text recognition. The photo never leaves your phone.
 
-### Diagnostics
-- Basic, anonymous logs may be collected to help us troubleshoot crashes or subscription issues (e.g., error codes). We do not build profiles or sell data.
+If you turn on AI scanning, the recognized text (not the photo) is sent to our server, hosted by **Supabase**, and from there to **Anthropic**, which turns the text into structured fields such as store, total, tax and date. The result is returned to your device and the text is discarded. Neither our server nor Anthropic stores the receipt text, and Anthropic does not use it to train its models.
 
-## How We Use Data
-- Provide core features (storing receipts, search, reminders).
-- Verify Pro subscription and restore purchases across devices.
-- Improve reliability and fix bugs.
+AI scanning is optional. You are asked before the first AI scan and can turn it off at any time in Account. With it off, scanning works entirely on your device.
 
-## Data Sharing
-- **Apple**: iCloud/CloudKit for sync; StoreKit for purchases.
-- **RevenueCat**: purchase validation and entitlement management.
-- We do **not** sell personal data. We do not share data with advertisers.
+## What Our Server Keeps
 
-## Your Choices
-- You can use the App entirely offline without iCloud sync.
-- You can delete receipts and photos at any time inside the App.
-- Deleting the App removes local data from your device.
-- To remove iCloud data, use **Settings ▸ Apple ID ▸ iCloud ▸ Manage Storage ▸ ReceiptKeep**.
+To limit how many AI scans each account can use, our server stores a one-way hash of your Apple sign-in identifier together with a count of scans per day. The hash cannot be turned back into your identifier, and no receipt data is kept with it. A sign-in session token is held on your device, in the iOS Keychain, so you are not asked to sign in again for 90 days.
+
+## Sign in with Apple
+
+ReceiptKeep uses Sign in with Apple. We receive the identifier Apple assigns to you for this App and, only if you choose to share it, your name and email. We use the identifier to attach your subscription to your account and to apply the scan limits above.
+
+## Purchases
+
+Subscriptions are handled by Apple and **RevenueCat**. RevenueCat receives your app-specific identifier and purchase information from Apple so that your Pro access works across your devices. See RevenueCat's privacy policy at https://www.revenuecat.com/privacy.
+
+## What We Don't Do
+
+We do not sell your data, show ads, or use third-party analytics or tracking. We do not have access to your receipts.
+
+## Deleting Your Data
+
+Delete All Data in Account removes your receipts from your device and from your iCloud account on all your devices. To delete your sign-in record and subscription identifier as well, email us at the address below.
 
 ## Children
-ReceiptKeep is not intended for children under 13.
+
+ReceiptKeep is not directed at children under 13 and we do not knowingly collect information from them.
 
 ## Changes
-We may update this policy as the App evolves. Material changes will be noted in the App and on our policy page.
+
+If this policy changes, the new version will be posted here with a new date.
 
 ## Contact
-Questions or requests: **bobemedia@gmail.com**  
 
+bobemedia@gmail.com
